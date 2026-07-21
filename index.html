@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">CROCHET <span>PARADISE</span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                  <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-subtitle">WELCOME TO</span>
+                <h1>Crochet Paradise <br><span>WOVEN WITH LOVE</span></h1>
+                <p>Discover unique, handmade treasures crafted with sustainable materials and artisanal care.</p>
+                <button class="btn-cute-pro" onclick="location.href='#products'">SHOP NOW</button>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="/Images/heroimg.jpg" alt="Featured Crochet Handiwork">
+            </div>
+        </div>
+    </header>
+
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">
+                Explore Our Products</h2>
+            <div class="product-grid" id="productGrid">
+                </div>
+            <button id="loadMore" class="load-more-btn" onclick="loadMoreProducts()">Tap to See More Products here...</button>
+        </div>
+    </section>
+
+
+<section id="why-us" class="why-section">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <span class="why-icon">✨</span>
+                <h3>Artisan Quality</h3>
+                <p>Each item is hand-stitched with meticulous attention to detail, ensuring lasting beauty and comfort.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🌿</span>
+                <h3>Eco-Friendly Yarns</h3>
+                <p>We source sustainable fibers that feel soft on your skin and gentle on the planet.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🎨</span>
+                <h3>Custom Requests</h3>
+                <p>Personalize colors, sizes, and styles with our bespoke design consultations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="history" class="history-section">
+        <div class="container">
+            <div class="history-card">
+                <div class="history-img-box">
+                    <img src="/Images/history.jpg" alt="History of Crochet">
+                </div>
+                <h2>History of Crochet</h2>
+                <div class="history-text">
+                    <h3>The Art of Crochet</h3>
+                    <p>Crochet has a rich history, dating back to the 19th century, when it became popular as a decorative craft. Originally used for making lace, it has evolved into a beloved form of textile art.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="container footer-grid">
+    <div class="contact-info-card">
+        <h2>Get in touch</h2>
+        <p><strong>Address:</strong> Rushi Vihar, Kandivali (East)</p>
+        <p><strong>Contact number:</strong> 7769961160</p>
+        <p><strong>Email:</strong> hellocrochetart.com</p>
+        <div class="social-links">Instagram • WhatsApp • Facebook</div>
+    </div>
+
+    <div class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button class="btn-cute-pro">Send Message</button>
+    </div>
+</div>
+
+
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Shopping Bag</h3>
+            <span class="close-btn" onclick="toggleCart()">✕</span>
+        </div>
+        <div id="cart-items" class="cart-body"></div>
+        <div class="cart-footer">
+            <div class="total-row"><span>Grand Total</span><span id="cart-total">₹0</span></div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="cart-btn" onclick="toggleCart()">
+        🛒 <span id="cart-count" class="cart-badge">0</span>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+:root {
+    --teal: #0c7b7b;
+    --dark-teal: #085a5a;
+    --cream: #FCECE4;
+    --white: #FFFFFF;
+    --text: #2d3436;
+    --accent: #ff7675;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FFFFFF;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--teal);
+    font-weight: bold;
+}
+
+.logo span {
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--teal);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--teal);
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 80px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--teal);
+    line-height: 1.1;
+    margin: 15px 0 25px;
+}
+
+.hero-content h1 span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: var(--dark-teal);
+    display: block;
+    margin-top: 10px;
+}
+
+.hero-subtitle {
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--dark-teal);
+    font-size: 0.85rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+.hero-image-wrapper {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Products Section --- */
+.products-section {
+    padding: 100px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.section-title {
+    color: var(--teal);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #E0F2F1;
+    padding: 30px;
+    border-radius: 40px;
+    transition: 0.4s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 35px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: var(--teal);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+
+
+/* --- Load More Button --- */
+.load-more-btn {
+    display: block;
+    margin: 50px auto 0;
+    background: var(--teal);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.load-more-btn:hover {
+    background: var(--dark-teal);
+    transform: scale(1.05);
+}
+
+
+.why-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.why-card {
+  background: linear-gradient(145deg, rgba(19,161,171,0.12), rgba(245,237,229,0.92));
+  padding: 26px;
+  border-radius: 24px;
+  box-shadow: 0 18px 32px rgba(15, 85, 92, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.why-card span {
+  font-size: 2rem;
+}
+.why-card h3 {
+  margin: 15;
+  color: var(--teal);
+}
+.why-card p {
+  margin: 0;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+.why-card{
+    margin-bottom: 70px; /* This creates the gap between sections */
+    padding-bottom: 15px; /* Optional: adds internal breathing room */
+}
+
+
+/* --- History Section --- */
+.history-section {
+    padding: 100px 0;
+    background: #FFFFFF;
+    color: white;
+}
+
+.history-card {
+    background: #e0f2f1;
+    color: var(--text);
+    padding: 40px;
+    border-radius: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.history-img-box {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.history-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Updated Contact Section --- */
+/* --- Footer Base (The Teal Background) --- */
+.footer {
+    background: #0c7b7b; /* The teal from your pic */
+    padding: 80px 0 0;
+    color: white;
+}
+
+/* --- The Layout Grid --- */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+/* --- "Get in Touch" Section (The Light Card) --- */
+.contact-info-card {
+    background: #E0F2F1; /* Light blue/cream container */
+    padding: 40px;
+    border-radius: 40px;
+    color: #2d3436; /* Dark text so it's readable on light blue */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.contact-info-card h2 {
+    color: var(--teal);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+/* --- "Send Message" Section (Popping against Teal) --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: none;
+    background: white; /* This makes them "pop" against the teal */
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Make the button stand out */
+.contact-form .btn-cute-pro {
+    background: #0c7b7b; 
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.contact-form .btn-cute-pro:hover {
+    background: #028920;
+    color: #000000;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+
+
+/* --- Buttons & UI --- */
+.btn-cute-pro {
+    background: var(--teal);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-add {
+    background: var(--teal);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* --- Cart Drawer --- */
+.cart-drawer {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background: #FFFFFF;
+    z-index: 2000;
+    transition: 0.5s;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-header {
+    padding: 20px;
+    background: var(--teal);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-body {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--teal);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --- Floating Cart Button --- */
+.cart-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--dark-teal);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1500;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--accent);
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+/* --- Mobile Queries --- */
+@media (max-width: 768px) {
+    .hero-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image-wrapper {
+        order: -1;
+        height: 350px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
