@@ -1,6 +1,6 @@
 const initialProducts = [
-    { name: "Cozy Hats", price: 599, range: "₹599 - ₹999", img: "/Images/cozyhats.jpg" },
-    { name: "Warm Blankets", price: 4000, range: "₹4,000 - ₹9,000+", img: "/Images/blankets.jpg" }
+    { name: "Cozy Hats", price: 599, range: "₹599 - ₹999", img: "images/cozyhats.jpg" },
+    { name: "Warm Blankets", price: 4000, range: "₹4,000 - ₹9,000+", img: "images/blankets.jpg" }
 ];
 
 let cart = [];
@@ -38,8 +38,8 @@ function removeItem(index) { cart.splice(index, 1); updateCart(); }
 
 function loadMoreProducts() {
     const more = [
-        { name: "Accessories", price: 500, range: "₹500 - ₹880", img: "/Images/accessories.jpg" },
-        { name: "Cardigans", price: 3500, range: "₹3,500 - ₹8,000", img: "/Images/tops.jpg" }
+        { name: "Accessories", price: 500, range: "₹500 - ₹880", img: "images/accessories.jpg" },
+        { name: "Cardigans", price: 3500, range: "₹3,500 - ₹8,000", img: "images/tops.jpg" }
     ];
     renderProducts([...initialProducts, ...more]);
     document.getElementById('loadMore').style.display = 'none';
